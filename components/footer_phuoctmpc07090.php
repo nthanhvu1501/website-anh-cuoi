@@ -31,35 +31,37 @@
             color: #000000;
             margin-bottom: 20px;
         }
+
+        footer {
+            background-color: lightgrey;
+        }
     </style>
 </head>
 <body>
     <footer>
-        <div class="container bg-gray position-relative">
-            <div class="container overflow-hidden">
-                <div class="row g-2 justify-content-between">
-                    <div class="col-md-4">
-                        <h1 class="Fphoto my-4">FPhoto</h1>
-                        <span class="span-footer">
-                            <i class="bi bi-geo-alt-fill"></i> Toà nhà FPT Polytechnic, đường số 22, phường Thường Thạnh, quận Cái Răng, TP Cần Thơ
-                        </span>
-                        <span class="span-footer">
-                            <i class="bi bi-telephone-fill"></i> 099999999
-                        </span>
-                        <span class="span-footer">
-                            <i class="bi bi-envelope-fill"></i> user@gmail.com
-                        </span>
-                    </div>
+        <div class="container overflow-hidden position-relative">
+            <div class="row g-2 justify-content-between">
+                <div class="col-md-4">
+                    <h1 class="Fphoto my-4">FPhoto</h1>
+                    <span class="span-footer">
+                        <i class="bi bi-geo-alt-fill"></i> Toà nhà FPT Polytechnic, đường số 22, phường Thường Thạnh, quận Cái Răng, TP Cần Thơ
+                    </span>
+                    <span class="span-footer">
+                        <i class="bi bi-telephone-fill"></i> 099999999
+                    </span>
+                    <span class="span-footer">
+                        <i class="bi bi-envelope-fill"></i> user@gmail.com
+                    </span>
+                </div>
 
-                    <div class="col-md-4" style="display: inline-block; ">
-                        <h1 class="my-3" style="display: block; color: #000000; font-weight: 700; font-size: 20px; font-family: 'Inter';">Đăng Kí Nhận Email Mới Nhất</h1>
-                        <input type="email" style="width: 67%; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); padding: 5px 10px; border-radius:7px;">
-                        <button style="border: none; border-radius:8px; margin: 0 5px; padding: 5px 10px; background-color: #FFAC88; color: #ffffff;">Đăng Kí</button>
-                    </div>
+                <div class="col-md-4" style="display: inline-block; ">
+                    <h1 class="my-3" style="display: block; color: #000000; font-weight: 700; font-size: 20px; font-family: 'Inter';">Đăng Kí Nhận Email Mới Nhất</h1>
+                    <input type="email" style="width: 67%; padding: 5px 10px; border-radius:7px;">
+                    <button style="border: none; border-radius:8px; margin: 0 5px; padding: 5px 10px; background-color: #FFAC88; color: #ffffff;">Đăng Kí</button>
                 </div>
-                <div class="row text-center">
-                    <p>&copy; 2023. Copyright FPhoto</p>
-                </div>
+            </div>
+            <div class="row text-center">
+                <p>&copy; 2023. Copyright FPhoto</p>
             </div>
         </div>
     </footer>
