@@ -1,6 +1,6 @@
 <?php 
 $components = [
-    ''
+    'vuntpc07201'
 ];
 require_once 'header.php';
 foreach ($components as $component){
