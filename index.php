@@ -1,6 +1,6 @@
 <?php 
 $components = [
-    ''
+    'demoslide'
 ];
 require_once 'header.php';
 foreach ($components as $component){
