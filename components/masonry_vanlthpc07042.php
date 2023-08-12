@@ -11,8 +11,8 @@ require './connect.php';
             while ($row = $result->fetch_assoc()):
                 ?>
                 <div class="masonry-item mb-3">
-                    <img src="./uploads/<?= $row['image']?>"
-                        data-id="<?= $i?>" class="carousel-image w-100 rounded-3" data-toggle="modal" data-target="#exampleModal">
+                    <img src="./uploads/<?= $row['image'] ?>" data-id="<?= $i ?>" class="carousel-image w-100 rounded-3"
+                        data-toggle="modal" data-target="#exampleModal">
                 </div>
                 <?php
                 $i++;
@@ -30,20 +30,22 @@ require './connect.php';
                     <div class="carousel-inner">
                         <!-- Images will be added dynamically via JavaScript -->
                     </div>
-                   
+
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button type="button" class="btn btn-outline-primary">
+
+                    <button type="button" class="btn btn-outline-primary" id="save" onclick="saveImage()">
                         Chọn ảnh
                     </button>
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon btn btn-dark" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon btn btn-dark" aria-hidden="true"></span>
+        </a>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon btn btn-dark" aria-hidden="true"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon btn btn-dark" aria-hidden="true"></span>
-                    </a>
+       
     </div>
 </div>
