@@ -26,26 +26,23 @@ require './connect.php';
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <!-- Images will be added dynamically via JavaScript -->
+             
+                <div class="modal-body">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Images will be added dynamically via JavaScript -->
+                        </div>
+    
                     </div>
-
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-
-                    <button type="button" class="btn btn-outline-primary" id="save" onclick="saveImage()">
-                        Chọn ảnh
+                    <button class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon btn btn-dark" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon btn btn-dark" aria-hidden="true"></span>
                     </button>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon btn btn-dark" aria-hidden="true"></span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon btn btn-dark" aria-hidden="true"></span>
-        </a>
             </div>
         </div>
-       
+
     </div>
 </div>
