@@ -22,11 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
       if (index === currentIndex) {
         carouselItem.classList.add("active");
       }
-      const img = document.createElement("img");
-      img.src = image.src;
-      img.classList.add("d-block", "w-100");
-      carouselItem.appendChild(img);
+      // const img = document.createElement("img");
+      // img.src = image.src;
+      // img.classList.add("d-block", "w-100");
+      // carouselItem.appendChild(img);
+      carouselItem.innerHTML = `
+      <img src="${image.src}" class="d-block w-100">
+      <div class="d-flex align-items-center justify-content-center">
+      <button class="btn btn-outline-primary btn-select" onclick="toggleSelection(this)">Chọn ảnh</button>
+      </div>
+      `;
       modalInner.appendChild(carouselItem);
+
     });
   }
 });
