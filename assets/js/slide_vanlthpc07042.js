@@ -18,22 +18,21 @@ document.addEventListener("DOMContentLoaded", function () {
     images.forEach((image, index) => {
       const carouselItem = document.createElement("div");
       carouselItem.classList.add("carousel-item");
-      
+
       if (index === currentIndex) {
         carouselItem.classList.add("active");
       }
-      // const img = document.createElement("img");
-      // img.src = image.src;
-      // img.classList.add("d-block", "w-100");
-      // carouselItem.appendChild(img);
+
       carouselItem.innerHTML = `
       <img src="${image.src}" class="d-block w-100">
-      <div class="d-flex align-items-center justify-content-center">
-      <button class="btn btn-outline-primary btn-select" onclick="toggleSelection(this)">Chọn ảnh</button>
+      <div class="d-flex align-items-center justify-content-center mt-2">
+      
+       
+        <a class="btn btn-outline-warning" href="./image-selected_vuntpc07201.php">Ảnh đã chọn</a>
+      <button class="ms-2 btn btn-outline-primary btn-select" onclick="toggleSelection(this)">Chọn ảnh</button>
       </div>
       `;
       modalInner.appendChild(carouselItem);
-
     });
   }
 });

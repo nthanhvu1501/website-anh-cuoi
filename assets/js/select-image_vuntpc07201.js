@@ -1,12 +1,4 @@
-// let imgArr = [];
-// function selectImage(imgSrc) {
-//   img = imgSrc.replace(/^.*[\\\/]/, "");
-//   if (!imgArr.includes(img)) {
-//     imgArr.push(img);
-//     localStorage.setItem("image", JSON.stringify(imgArr));
-//   }
 
-// }
 function toggleSelection(button) {
   // Lấy thông tin ảnh từ thuộc tính src
   let img = button.parentElement.parentElement.children[0].src;
