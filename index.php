@@ -1,7 +1,6 @@
 <?php
 $components = [
-    'header_vanlthpc07042',
-    'masonry_vanlthpc07042'
+    'frmDangKy'
 ];
 require_once 'header.php';
 foreach ($components as $component){
