@@ -1,7 +1,7 @@
 <?php
 require './connect.php';
 ?>
-<div class="container">
+<div class="container my-3">
     <div class="image-list masonry">
         <?php
         $sql = "SELECT * FROM image";
@@ -20,7 +20,7 @@ require './connect.php';
         endif;
         ?>
 
-
+        
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
