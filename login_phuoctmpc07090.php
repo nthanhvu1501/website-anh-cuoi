@@ -6,19 +6,19 @@
                 <div class="border border-3 border-warning"></div>
                 <div class=" bg-white shadow-lg">
                     <div class="-body p-5">
-                        <form class="mb-3 mt-md-4 needs-validation" novalidate>
+                        <form class="mb-3 mt-md-4 needs-validation" novalidate action="" method="post">
                             <h2 class="fw-bold mb-2 text-uppercase" style="color: #FFAC88;">FPhoto</h2>
                             <p class=" mb-5">Hãy nhập tài khoản và mật khẩu của bạn!</p>
                             <div class="mb-3">
                                 <label for="username" class="form-label ">Tên tài khoản:</label>
-                                <input type="text" class="form-control" id="text" placeholder="abc123" require>
+                                <input type="text" class="form-control" id="text" name="txtTK" placeholder="abc123" required>
                             </div>
                             <div class="invalid-feedback">
                                 Không được bỏ trống Username
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label ">Mật Khẩu:</label>
-                                <input type="password" class="form-control" id="password" placeholder="*******" require>
+                                <input type="password" class="form-control" id="password" name="txtMK" placeholder="*******" required>
                             </div>
                             <div class="invalid-feedback">
                                 Không được bỏ trống mật khẩu
@@ -58,3 +58,19 @@
         })
     })()
 </script>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $inputUsername = $_POST["txtTK"];
+    $inputPassword = $_POST["txtMK"];
+    $username = "admin";
+    $password = "123";
+
+   if ($inputUsername == $username && $inputPassword == $password) {
+        header("Location: https://fpl3.poly.edu.vn/");
+        exit();
+    } else {
+        echo "<script>alert('Sai tài khoản hoặc mật khẩu.')</script>";
+    }
+}
+?>
