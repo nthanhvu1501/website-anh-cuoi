@@ -6,8 +6,7 @@
             <ul id="sidebarnav">
                 <li class="sidebar-item">
                     <a class="sidebar-link sidebar-link" href="index.php" aria-expanded="false">
-                        <i data-feather="home" class="feather-icon"></i>
-                        <span class="hide-menu">Dashboard</span>
+                        <span class="hide-menu">Thêm hình ảnh</span>
                     </a>
                 </li>
             </ul>
