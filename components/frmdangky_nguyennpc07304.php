@@ -1,93 +1,109 @@
-<!doctype html>
-<style>
-    *{
-    margin:0;
-    padding:0;
-    border:none;
-    font-family: 'Open Sans', sans-serif;
-}
-body {
-    overflow: hidden;
-    background-color: #ededed;
-}
-.to {
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: minmax(100px,auto);
-}
-
-.form {
-    border: 1px solid #80808000;
-    grid-column: 6/9;
-    grid-row: 3;
-    height: 400px;
-    width: 392px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    border-radius: 15px;
-    box-shadow: 0px 0px 14px 0px grey;
-    background-color: white;
-}
-h2 {
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-i.fab.fa-app-store-ios {
-    display: block;
-    margin-bottom: 50px;
-    font-size: 28px;
-}
-
-label {
-    margin-left: -126px;
-    display: block;
-}
-input{
-    display: block;
-    border: 0.5px solid rgb(207, 204, 204);
-    margin-top: 6px;
-    margin-bottom: 10px;
-    outline-style: none;
-}
-input[type="text"] {
-    padding: 5px;
-    width: 70%;
-}
-
-input#submit {
-    padding: 7px;
-    width: 50%;
-    border-radius: 10px; 
-    position: absolute;
-    bottom: 10px;
-    border: 0.5px solid black;
-    cursor: pointer;
-    background: linear-gradient(to right);
-}
-
-</style>
-<html>
-	<head>
-		<title>Đăng ký</title>
-		<link rel="stylesheet" href="CSS/1.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-	</head>
-	<body>
-		<div class="to">
-			<div class="form">
-				<h2>Đăng ký</h2>
-				<label style="margin-left: -170px;">Tên đăng nhập</label>
-				<input type="text" name="tendangnhap">
-				<label style="margin-left: -220px;">Mật khẩu</label>
-				<input type="text" name="matkhau"> 
-                <label style="margin-left: -240px;">Email</label>
-				<input type="text" name="tendangnhap">
-				<input id="submit" type="submit" name="submit" value="Đăng ký">
-			</div>				
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Đăng ký</title>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous"
+      />
+    </head>
+    <body>
+      <div
+        class="vh-100 w-75 d-flex justify-content-center align-items-center m-auto"
+      >
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+              <div class="border border-3 border-warning"></div>
+              <div class="bg-white shadow-lg">
+                <div class="-body p-5">
+                  <form class="mb-3 mt-md-4 needs-validation" novalidate>
+                    <h2
+                      class="fw-bold mb-2 text-uppercase"
+                      style="color: #ffac88"
+                    >
+                      FPhoto
+                    </h2>
+                    <p class="mb-5">Hãy tạo tài khoản của bạn tại đây!</p>
+                    <div class="mb-3">
+                      <label for="username" class="form-label"
+                        >Tên tài khoản:</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="text"
+                        placeholder="abc123"
+                        require
+                      />
+                    </div>
+                    <div class="invalid-feedback">
+                      Không được bỏ trống Username
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Mật Khẩu:</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="*******"
+                        require
+                      />
+                    </div>
+                    <div class="invalid-feedback">
+                      Không được bỏ trống mật khẩu
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label"
+                        >Xác nhận mật Khẩu:</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="*******"
+                        require
+                      />
+                    </div>
+                    <div class="invalid-feedback">
+                      Không được bỏ trống phần xác nhận mật khẩu
+                    </div>
+                    <div class="mb-3">
+                      <label for="username" class="form-label">Email:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="text"
+                        placeholder="abc123@gmail.com"
+                        require
+                      />
+                    </div>
+                    <div class="invalid-feedback">
+                      Không được bỏ trống Email
+                    </div>
+                    <div class="d-grid">
+                      <button class="btn btn-outline-dark" type="submit">
+                        Đăng ký
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </html>
 </html>
