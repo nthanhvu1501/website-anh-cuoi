@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 21, 2023 at 09:29 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th8 21, 2023 lúc 03:57 PM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `web_anh_cuoi`
+-- Cơ sở dữ liệu: `web_anh_cuoi`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `album`
+-- Cấu trúc bảng cho bảng `album`
 --
 
 CREATE TABLE `album` (
@@ -37,7 +37,7 @@ CREATE TABLE `album` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `album`
+-- Đang đổ dữ liệu cho bảng `album`
 --
 
 INSERT INTO `album` (`id_album`, `thumbnail`, `name`, `description`, `create_at`, `update_at`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `album` (`id_album`, `thumbnail`, `name`, `description`, `create_at`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `image`
+-- Cấu trúc bảng cho bảng `image`
 --
 
 CREATE TABLE `image` (
@@ -58,7 +58,7 @@ CREATE TABLE `image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `image`
+-- Đang đổ dữ liệu cho bảng `image`
 --
 
 INSERT INTO `image` (`id`, `image`, `id_album`, `create_at`) VALUES
@@ -78,7 +78,7 @@ INSERT INTO `image` (`id`, `image`, `id_album`, `create_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `imageselected`
+-- Cấu trúc bảng cho bảng `imageselected`
 --
 
 CREATE TABLE `imageselected` (
@@ -88,7 +88,7 @@ CREATE TABLE `imageselected` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `imageselected`
+-- Đang đổ dữ liệu cho bảng `imageselected`
 --
 
 INSERT INTO `imageselected` (`id`, `image`, `id_user`) VALUES
@@ -108,7 +108,7 @@ INSERT INTO `imageselected` (`id`, `image`, `id_user`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `imagetemp`
+-- Cấu trúc bảng cho bảng `imagetemp`
 --
 
 CREATE TABLE `imagetemp` (
@@ -120,92 +120,93 @@ CREATE TABLE `imagetemp` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Cấu trúc bảng cho bảng `user`
 --
 
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
   `fullName` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `permission` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `album`
+-- Chỉ mục cho bảng `album`
 --
 ALTER TABLE `album`
   ADD PRIMARY KEY (`id_album`);
 
 --
--- Indexes for table `image`
+-- Chỉ mục cho bảng `image`
 --
 ALTER TABLE `image`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_album` (`id_album`);
 
 --
--- Indexes for table `imageselected`
+-- Chỉ mục cho bảng `imageselected`
 --
 ALTER TABLE `imageselected`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `imagetemp`
+-- Chỉ mục cho bảng `imagetemp`
 --
 ALTER TABLE `imagetemp`
   ADD PRIMARY KEY (`id_image`);
 
 --
--- Indexes for table `user`
+-- Chỉ mục cho bảng `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `album`
+-- AUTO_INCREMENT cho bảng `album`
 --
 ALTER TABLE `album`
   MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `image`
+-- AUTO_INCREMENT cho bảng `image`
 --
 ALTER TABLE `image`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `imageselected`
+-- AUTO_INCREMENT cho bảng `imageselected`
 --
 ALTER TABLE `imageselected`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `imagetemp`
+-- AUTO_INCREMENT cho bảng `imagetemp`
 --
 ALTER TABLE `imagetemp`
   MODIFY `id_image` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `image`
+-- Các ràng buộc cho bảng `image`
 --
 ALTER TABLE `image`
   ADD CONSTRAINT `image_ibfk_1` FOREIGN KEY (`id_album`) REFERENCES `album` (`id_album`);
