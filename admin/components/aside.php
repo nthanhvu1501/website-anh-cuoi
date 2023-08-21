@@ -6,7 +6,17 @@
             <ul id="sidebarnav">
                 <li class="sidebar-item">
                     <a class="sidebar-link sidebar-link" href="index.php" aria-expanded="false">
+                        <span class="hide-menu">Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link sidebar-link" href="image-add_vuntpc07201.php" aria-expanded="false">
                         <span class="hide-menu">Thêm hình ảnh</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link sidebar-link" href="album-add_vuntpc07201.php" aria-expanded="false">
+                        <span class="hide-menu">Thêm album</span>
                     </a>
                 </li>
             </ul>

@@ -1,8 +1,8 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid col-gl-4">
-            <a class="navbar-brand" href="#">
-                <img srcset="./assets/images/logo.png 2x"
+            <a class="navbar-brand" href="index.php">
+                <img srcset="../assets/images/logo.png 2x"
                     alt="Logo">
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">

@@ -44,7 +44,7 @@
             <div class="row py-3 g-2 justify-content-between">
                 <div class="col-md-4">
                     <a href="index.php">
-                        <img srcset="./assets/images/logo.png 2x" alt="Logo">
+                        <img srcset="../assets/images/logo.png 2x" alt="Logo">
                     </a>
                     <span class="span-footer mt-3">
                         <i class="bi bi-geo-alt-fill"></i> Toà nhà FPT Polytechnic, đường số 22, phường Thường Thạnh,

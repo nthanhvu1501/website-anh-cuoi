@@ -1,6 +1,7 @@
 .masonry {
-  column-count: 3;
+  column-count: var(--i);
   column-gap: 10px;
+
 }
 .masonry .masonry-item{
   break-inside: avoid;

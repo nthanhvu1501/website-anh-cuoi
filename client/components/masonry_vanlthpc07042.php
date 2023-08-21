@@ -1,17 +1,24 @@
 <?php
-require './connect.php';
+require '../connect.php';
 ?>
 <div class="container my-3">
-    <div class="image-list masonry">
+    <?php 
+    $id_album = $_GET['id_album'];
+    $album = $conn->query("SELECT name,description FROM album WHERE id_album = '$id_album'")->fetch_assoc();
+    ?>
+    <h2 class="text-center text-uppercase mb-3"><?= $album['name']?></h2>
+    <h3 class="text-center text-uppercase mb-3"><?= $album['description']?></h3>
+    <div class="image-list masonry" style="--i:3;">
         <?php
-        $sql = "SELECT * FROM image";
+        
+        $sql = "SELECT * FROM image WHERE id_album = '$id_album'";
         $result = $conn->query($sql);
         $i = 1;
         if ($result->num_rows > 0):
             while ($row = $result->fetch_assoc()):
                 ?>
                 <div class="masonry-item mb-3">
-                    <img src="./uploads/<?= $row['image'] ?>" data-id="<?= $i ?>" class="carousel-image w-100 rounded-3"
+                    <img src="../uploads/<?= $row['image'] ?>" data-id="<?= $i ?>" class="carousel-image w-100 rounded-3"
                         data-toggle="modal" data-target="#exampleModal">
                 </div>
                 <?php
@@ -26,7 +33,6 @@ require './connect.php';
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-             
                 <div class="modal-body">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
