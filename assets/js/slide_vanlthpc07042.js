@@ -26,10 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
       carouselItem.innerHTML = `
       <img src="${image.src}" class="d-block w-100">
       <div class="d-flex align-items-center justify-content-center mt-2">
-      
-       
         <a class="btn btn-outline-warning" href="./image-selected_vuntpc07201.php">Ảnh đã chọn</a>
-      <button class="ms-2 btn btn-outline-primary btn-select" onclick="toggleSelection(this)">Chọn ảnh</button>
+        <button class="ms-2 btn btn-outline-primary btn-select" onclick="toggleSelection(this)">Chọn ảnh</button>
       </div>
       `;
       modalInner.appendChild(carouselItem);
