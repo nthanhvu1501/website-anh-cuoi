@@ -32,14 +32,12 @@
             margin-bottom: 20px;
         }
 
-        footer {
-            background-color: lightgrey;
-        }
+
     </style>
 </head>
 
 <body>
-    <footer>
+    <footer class="bg-light">
         <div class="container overflow-hidden position-relative">
             <div class="row py-3 g-2 justify-content-between">
                 <div class="col-md-4">
@@ -58,18 +56,16 @@
                     </span>
                 </div>
 
-                <div class="col-md-4" style="display: inline-block; ">
-                    <h1 class="my-3"
-                        style="display: block; color: #000000; font-weight: 700; font-size: 20px; font-family: 'Inter';">
-                        Đăng Kí Nhận Email Mới Nhất</h1>
-                    <input type="email" style="width: 67%; padding: 5px 10px; border-radius:7px;">
-                    <button
-                        style="border: none; border-radius:8px; margin: 0 5px; padding: 5px 10px; background-color: #FFAC88; color: #ffffff;">Đăng
-                        Kí</button>
+                <div class="col-md-4">
+                    <h4 class="my-3">Đăng kí nhận Email mới nhất</h4>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <input type="email" class="form-control">
+                        <button class="btn btn-primary text-white w-25 ms-2">Đăng kí</button>
+                    </div>
                 </div>
             </div>
             <div class="row text-center">
-                <p>&copy; 2023. Copyright FPhoto</p>
+                <p>&copy; 2023. Copyright F Studio</p>
             </div>
         </div>
     </footer>

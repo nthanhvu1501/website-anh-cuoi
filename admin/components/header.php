@@ -10,13 +10,14 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Freedash Template - The Ultimate Multipurpose admin template</title>
+    <title>admin</title>
     <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="../assets/css/main.min.css"> -->
+    <link href="../assets/dist/css/style.css" rel="stylesheet">
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../assets/dist/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/masonry.css">
     <link rel="stylesheet" href="../assets/css/admin_vuntpc07201.css">
 </head>
