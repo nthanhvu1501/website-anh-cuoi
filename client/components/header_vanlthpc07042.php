@@ -19,7 +19,7 @@ session_start();
             </ul>
             <form class="d-flex w-50 mx-auto" role="search">
                 <input class="form-control me-2" type="search" placeholder="Tìm kiếm" name="search_key" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit" name="search">
+                <button class="btn btn-outline-primary" type="submit" name="search">
                     <i class="feather-icon" data-feather="search"></i>
                 </button>
             </form>
@@ -49,7 +49,7 @@ session_start();
                     <?php
                 else:
                     ?>
-                    <a class="btn-login btn btn-warning" href="./login_phuoctmpc07090.php">ĐĂNG NHẬP</a>
+                    <a class="btn-login btn btn-primary text-white" href="./login_phuoctmpc07090.php">ĐĂNG NHẬP</a>
                     <?php
                 endif;
                 ?>

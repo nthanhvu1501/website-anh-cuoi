@@ -7,10 +7,9 @@
             <button class="btn btn-primary" name="send">Gửi</button>
         </form>
     </div>
-    <div class="masonry" id="masonry">
+    <div class="masonry" id="masonry" style="--i:3;">
 
     </div>
-
 </div>
 <script>
     let selectedImages = JSON.parse(localStorage.getItem("selectedImages")) || [];
@@ -23,8 +22,7 @@
         selectedImages.forEach(element => {
             html += `
             <div class="masonry-item mb-3">
-                <img src="./uploads/${element}" class="carousel-image w-100 rounded-3">
-                
+                <img src="../uploads/${element}" class="carousel-image w-100 rounded-3">
             </div>
             `
         });

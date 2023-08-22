@@ -31,9 +31,6 @@
                                 <button class="btn btn-outline-dark" type="submit" name="login">Đăng nhập</button>
                             </div>
                         </form>
-                        <div>
-                            <p class="mb-0  text-center">Không có tài khoản? <a href="frmdangky_nguyennpc07304.php" class="text-primary fw-bold">Đăng Ký</a></p>
-                        </div>
                     </div>
                 </div>
             </div>
