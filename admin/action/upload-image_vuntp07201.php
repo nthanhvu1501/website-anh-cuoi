@@ -3,7 +3,7 @@ require '../../connect.php';
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 if (isset($_POST['submit'])) {
     $imgCount = count($_FILES['image']['name']);
-    $id_album = $_POST['id_album'];
+    $album_id = $_POST['album_id'];
     // $create_at = date('Y-m-d H-i-s');
     for ($i = 0; $i < $imgCount; $i++) {
         $image_temp = $_FILES["image"]["tmp_name"][$i];
@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         $target_dir = "../../uploads/";
         $target_file = $target_dir . $image_name;
         if (move_uploaded_file($image_temp, $target_file)) {
-            $sql = "INSERT INTO image(image,id_album) VALUE ('$image_name','$id_album')";
+            $sql = "INSERT INTO image(image,album_id) VALUE ('$image_name','$album_id')";
             $result = $conn->query($sql);
         }
         if ($result) {

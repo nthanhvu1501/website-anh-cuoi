@@ -9,14 +9,27 @@
                         <span class="hide-menu">Dashboard</span>
                     </a>
                 </li>
+                <li class="sidebar-item"> 
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                        aria-expanded="false">
+                        <span class="hide-menu">Album</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <span class="hide-menu">Danh sách album</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="album-add_vuntpc07201.php" class="sidebar-link">
+                                <span class="hide-menu">Thêm album</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link sidebar-link" href="image-add_vuntpc07201.php" aria-expanded="false">
                         <span class="hide-menu">Thêm hình ảnh</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link sidebar-link" href="album-add_vuntpc07201.php" aria-expanded="false">
-                        <span class="hide-menu">Thêm album</span>
                     </a>
                 </li>
             </ul>
