@@ -5,7 +5,7 @@
     <div class="row">
         <?php
         require '../connect.php';
-        $sql = $conn->query("SELECT * FROM album");
+        $sql = $conn->query("SELECT * FROM album WHERE is_active = 1");
         if ($sql->num_rows > 0):
             while ($album = $sql->fetch_assoc()):
                 ?>
@@ -16,7 +16,7 @@
                             <h5 class="card-title"><?= $album['name']?></h5>
                             <p class="card-text text-truncate"><?= $album['description']?></p>
                             <div class="text-center">
-                                <a href="./album-detail_vuntpc07201.php?id_album=<?= $album['id_album']?>" class="btn btn-primary">Xem album</a>
+                                <a href="./album-detail_vuntpc07201.php?album_id=<?= $album['album_id']?>" class="btn btn-primary">Xem album</a>
                             </div>
                         </div>
                     </div>

@@ -3,14 +3,14 @@ require '../connect.php';
 ?>
 <div class="container my-3">
     <?php 
-    $id_album = $_GET['id_album'];
-    $album = $conn->query("SELECT name,description FROM album WHERE id_album = '$id_album'")->fetch_assoc();
+    $album_id = $_GET['album_id'];
+    $album = $conn->query("SELECT name,description FROM album WHERE album_id = '$album_id'")->fetch_assoc();
     ?>
     <h2 class="text-center text-uppercase mb-3"><?= $album['name']?></h2>
     <h3 class="text-center text-uppercase mb-3"><?= $album['description']?></h3>
     <div class="image-list masonry" style="--i:3;">
         <?php
-        $sql = "SELECT * FROM image WHERE id_album = '$id_album'";
+        $sql = "SELECT * FROM image WHERE album_id = '$album_id'";
         $result = $conn->query($sql);
         $i = 1;
         if ($result->num_rows > 0):
