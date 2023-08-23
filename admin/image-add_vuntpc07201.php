@@ -10,7 +10,7 @@ include './components/header.php'
                 <div class="d-flex align-items-center">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb m-0 p-0">
-                            <li class="breadcrumb-item"><a href="./index.php" class="text-muted">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="./index.php" class="text-muted">Dashboard</a></li>
                             <li class="breadcrumb-item text-muted active" aria-current="page">Thêm hình ảnh</li>
                         </ol>
                     </nav>
@@ -57,9 +57,9 @@ include './components/header.php'
                                 while ($album = $result->fetch_assoc()):
                                     ?>
                                     <div class="form-check mb-1">
-                                        <input class="form-check-input" type="radio" id="<?= $album['id_album'] ?>" name="id_album"
-                                            value="<?= $album['id_album'] ?>" required>
-                                        <label for="<?= $album['id_album'] ?>" class="form-check-label"><?= $album['name'] ?></label>
+                                        <input class="form-check-input" type="radio" id="<?= $album['album_id'] ?>" name="album_id"
+                                            value="<?= $album['album_id'] ?>" required>
+                                        <label for="<?= $album['album_id'] ?>" class="form-check-label"><?= $album['name'] ?></label>
                                     </div>
                                     <?php
                                 endwhile;

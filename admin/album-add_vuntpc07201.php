@@ -10,13 +10,13 @@ include './components/header.php';
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-7 align-self-center">
-                <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Album</h3>
+                <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Thêm album</h3>
 
                 <div class="d-flex align-items-center">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb m-0 p-0">
-                            <li class="breadcrumb-item"><a href="./index.php" class="text-muted">Trang chủ</a></li>
-                            <li class="breadcrumb-item text-muted active" aria-current="page">Album</li>
+                            <li class="breadcrumb-item"><a href="./index.php" class="text-muted">Dashboard</a></li>
+                            <li class="breadcrumb-item text-muted active" aria-current="page">Thêm album</li>
                         </ol>
                     </nav>
                 </div>
@@ -33,7 +33,7 @@ include './components/header.php';
                                 Thông tin
                             </div>
                         </div>
-                        <div class="card-body ">
+                        <div class="card-body">
                             <div class="mb-3">
                                 <label for="album_name" class="form-label">Tên Album</label>
                                 <input type="text" id="album_name" name="album_name" class="form-control" required>
@@ -65,7 +65,6 @@ include './components/header.php';
                             <input class="form-control d-none" type="file" id="image" name="album_thumbnail"
                                 onchange="displayImg(this)" required>
                             <div class="invalid-feedback">Vui lòng chọn ảnh</div>
-                           
                         </div>
 
                     </div>
