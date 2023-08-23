@@ -6,7 +6,7 @@
                 <div class="border border-3 border-warning"></div>
                 <div class=" bg-white shadow-lg">
                     <div class="body p-5">
-                        <form class="mb-3 mt-md-4 needs-validation" method="post" action="./action/account-action_vuntpc07201.php" novalidate>
+                        <form class="mb-3 mt-md-4 needs-validation" method="post" action="./action/login-action_vuntpc07201.php" novalidate>
                             <div class="text-center mb-4">
                                 <a href="">
                                     <img srcset="../assets/images/logo.png 2x" alt="">
