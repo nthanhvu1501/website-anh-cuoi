@@ -1,4 +1,4 @@
-<?php include './header.php' ?>
+<?php include '../client/header.php' ?>
 <div class="vh-100 w-75 d-flex justify-content-center align-items-center m-auto">
     <div class="container">
         <div class="row d-flex justify-content-center">
@@ -37,4 +37,4 @@
         </div>
     </div>
 </div>
-<?php include './footer.php' ?>
+<?php include '../client/footer.php' ?>

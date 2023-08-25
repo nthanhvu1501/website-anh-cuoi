@@ -1,7 +1,7 @@
 <?php
+session_start();
 include './components/header.php'
     ?>
-
 <div class="page-wrapper">
 <div class="page-breadcrumb">
         <div class="row">
@@ -19,7 +19,7 @@ include './components/header.php'
         </div>
     </div>
     <div class="container mt-5">
-        <form action="./action/upload-image_vuntp07201.php" method="post" enctype="multipart/form-data" id="formAdd"
+        <form action="./action/image-action_vuntp07201.php" method="post" enctype="multipart/form-data" id="formAdd"
             class="needs-validation" novalidate>
             <div class="card">
                 <div class="card-header">
@@ -71,7 +71,7 @@ include './components/header.php'
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary" name="submit">
+            <button type="submit" class="btn btn-primary mb-5" name="image_add">
                 Lưu
             </button>
 

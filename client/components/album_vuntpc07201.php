@@ -13,7 +13,7 @@
                     <div class="card">
                         <img src="../uploads/<?= $album['thumbnail']?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><?= $album['name']?></h5>
+                            <h5 class="card-title text-center"><?= $album['name']?></h5>
                             <p class="card-text text-truncate"><?= $album['description']?></p>
                             <div class="text-center">
                                 <a href="./album-detail_vuntpc07201.php?album_id=<?= $album['album_id']?>" class="btn btn-primary">Xem album</a>
