@@ -6,6 +6,7 @@
 .masonry .masonry-item{
   break-inside: avoid;
 }
+
 .carousel-item img{
   object-fit: contain;
   max-height: 600px;
