@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if(isset($_SESSION['error_login'])):
+?>
+<script>alert("Sai thông tin đăng nhập")</script>
+<?php 
+endif;
+?>
 <?php include './header.php' ?>
 <div class="vh-100 w-75 d-flex justify-content-center align-items-center m-auto">
     <div class="container">
@@ -26,7 +34,7 @@
                                     Không được bỏ trống mật khẩu
                                 </div>
                             </div>
-                            <p class="small"><a class="text-primary" href="forget-password.html">Quên Mật Khẩu?</a></p>
+                            <!-- <p class="small"><a class="text-primary" href="forget-password.html">Quên Mật Khẩu?</a></p> -->
                             <div class="d-grid">
                                 <button class="btn btn-primary" type="submit" name="login">Đăng nhập</button>
                             </div>

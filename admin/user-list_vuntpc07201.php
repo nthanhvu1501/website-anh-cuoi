@@ -1,7 +1,7 @@
 <?php
 session_start();
 include './components/header.php'
-    ?>
+?>
 <div class="page-wrapper">
     <div class="page-breadcrumb">
         <div class="row">
@@ -32,28 +32,27 @@ include './components/header.php'
                 <?php
                 require '../connect.php';
                 $sql = $conn->query("SELECT * FROM user");
-                if ($sql->num_rows > 0):
-                    while ($user = $sql->fetch_assoc()):
-                        ?>
+                if ($sql->num_rows > 0) :
+                    while ($user = $sql->fetch_assoc()) :
+                ?>
                         <tr>
-                            <td><?= $user['user_id']?></td>
-                            <td><?= $user['fullName']?></td>
-                            <td><?= $user['username']?></td>
-                            <td><?= $user['email']?></td>
-                            <td><?= $user['permission']?></td>
-                            <td>
-                                <a href="user-edit_vuntpc07201.php?user_id=<?= $user['user_id']?>"  class="btn btn-success"><i class="feather-icon" data-feather="edit"></i></a>
+                            <td><?= $user['user_id'] ?></td>
+                            <td  style="width: 20%"><?= $user['fullName'] ?></td>
+                            <td style="width: 20%"><?= $user['username'] ?></td>
+                            <td style="width: 20%"><?= $user['email'] ?></td>
+                            <td><?= $user['permission'] ?></td>
+                            <td class="float-end">
+                                <a href="user-info_vuntpc07201.php?user_id=<?= $user['user_id'] ?>" class="btn btn-primary">xem thông tin</a>
+                                <a href="user-edit_vuntpc07201.php?user_id=<?= $user['user_id'] ?>" class="btn btn-success"><i class="feather-icon" data-feather="edit"></i></a>
                                 <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete<?= $user['user_id'] ?>">
                                     <i class="feather-icon" data-feather="trash"></i>
                                 </button>
-                                <div class="modal fade" id="modalDelete<?= $user['user_id'] ?>" tabindex="-1"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="modalDelete<?= $user['user_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Xóa user</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 Đồng ý xóa <span class="text-black fw-bold"><?= $user['username'] ?></span> ?
@@ -65,13 +64,12 @@ include './components/header.php'
                                                     </div>
                                                 </form>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
                             </td>
                         </tr>
-                    <?php
+                <?php
                     endwhile;
                 endif;
                 ?>

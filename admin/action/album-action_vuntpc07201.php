@@ -21,7 +21,6 @@ if (isset($_POST['album_add'])) {
             header('location: ../index.php');
         }
     }
-
 }
 if (isset($_POST['album_edit'])) {
     $album_id = $_POST['album_id'];
@@ -56,9 +55,11 @@ if (isset($_POST['album_edit'])) {
 }
 if (isset($_POST['album_delete'])) {
     $album_id = $_POST['album_id'];
-    $sql = "DELETE FROM album WHERE album_id = '$album_id'";
-    $result = $conn->query($sql);
-    if ($result) {
+    $delImage = "DELETE FROM image WHERE album_id = '$album_id'";
+    $delAlbum = "DELETE FROM album WHERE album_id = '$album_id'";
+    $result = $conn->query($delImage);
+    if($result){
+        $conn->query($delAlbum);
         header('location: ../album-list_vuntpc07201.php');
     }
 }

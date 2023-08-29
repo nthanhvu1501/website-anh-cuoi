@@ -9,16 +9,6 @@ if (isset($_GET['album_id'])) {
 <?php
 include './components/header.php'
     ?>
-<style>
-    .masonry-btn {
-        display: none;
-        transition: all .5s;
-    }
-
-    .masonry-item:hover .masonry-btn {
-        display: block;
-    }
-</style>
 <div class="page-wrapper">
     <?php
     require '../connect.php';
@@ -67,8 +57,9 @@ include './components/header.php'
         </div>
         <!-- Hình ảnh -->
         <div class="card mt-3">
-            <div class="card-header">
+            <div class="card-header d-flex align-items-center justify-content-between">
                 <div class="card-title">Hình ảnh</div>
+                <a class="btn btn-outline-primary" href="./image-add_vuntpc07201.php">Thêm hình ảnh</a>
             </div>
             <div class="card-body">
 
@@ -81,10 +72,11 @@ include './components/header.php'
                             ?>
                             <div class="masonry-item mb-3 position-relative">
                                 <img src="../uploads/<?= $image['image'] ?>" class="carousel-image w-100 rounded-3">
-                                <button class="masonry-btn position-absolute top-50 start-50 translate-middle btn-danger btn"
+                                <button class="masonry-btn position-absolute top-0 end-0 btn-danger btn"
                                     data-bs-toggle="modal" data-bs-target="#modalDelete<?= $image['image_id']?>">
                                     <i class="feather-icon" data-feather="trash"></i>
                                 </button>
+                                <!-- Modal delete -->
                                 <div class="modal fade" id="modalDelete<?= $image['image_id']?>" tabindex="-1" aria-labelledby="exampleModalLabel"
                                     aria-hidden="true">
                                     <div class="modal-dialog">
