@@ -61,11 +61,19 @@ include './components/header.php'
                                             value="<?= $album['album_id'] ?>" required>
                                         <label for="<?= $album['album_id'] ?>" class="form-check-label"><?= $album['name'] ?></label>
                                     </div>
+                                    <div class="invalid-feedback">Vui lòng chọn album</div>
                                     <?php
                                 endwhile;
-                            endif;
-                            ?>
-                            <div class="invalid-feedback">Vui lòng chọn ảnh</div>
+                                ?>
+                                <?php 
+                                else:
+                                ?>
+                                <input type="text" class ="d-none" required>
+                                <a class="btn btn-outline-primary" href="./album-add_vuntpc07201.php">Thêm album</a>
+                                <div class="invalid-feedback">Vui lòng thêm album</div>
+                                <?php 
+                                endif;
+                                ?>
                         </div>
                     </div>
                 </div>

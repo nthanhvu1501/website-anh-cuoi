@@ -1,13 +1,14 @@
+
 <div class="container my-3">
     <div class="d-flex justify-content-between">
         <h3>Ảnh đã chọn</h3>
 
-        <form action="./action/send-image_vuntpc07201.php" method="post">
+        <form action="./action/image-action_vuntpc07201.php" method="post">
             <input type="hidden" id="imageSelected" name="imageSelected">
             <?php
-            if (isset($_SESSION['user'])):
+            if (isset($_SESSION['user']) || isset($_SESSION['admin'])):
                 ?>
-                <button class="btn btn-primary" name="send">Gửi</button>
+                <button class="btn btn-primary" name="select_image">Gửi</button>
                 <?php
             else:
                 ?>
@@ -47,6 +48,7 @@
             selectedImages.splice(imgIndex, 1);
             localStorage.setItem("selectedImages", JSON.stringify(selectedImages));
             clickedButton.parentElement.remove();
+            window.location.href = './image-selected_vuntpc07201.php'
         }
     }
 </script>

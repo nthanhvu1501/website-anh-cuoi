@@ -1,7 +1,6 @@
 <?php
 require '../../connect.php';
 session_start();
-
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
@@ -18,7 +17,8 @@ if (isset($_POST['login'])) {
         }
         header('location: ../index.php');
     } else {
-        echo "Sai thông tin tài khoản";
+        $_SESSION['error_login'] = "Sai thông tin";
+        header('location: ../login_phuoctmpc07090.php');
     }
 }
 ?>

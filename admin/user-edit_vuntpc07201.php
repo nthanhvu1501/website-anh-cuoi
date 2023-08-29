@@ -7,9 +7,18 @@ if (isset($_GET['user_id'])) {
 }
 ?>
 <?php
+if (isset($_GET['error_username'])) :
+?>
+    <script>
+        alert("username đã tồn tại")
+    </script>
+<?php
+endif;
+?>
+<?php
 include './components/header.php'
 
-    ?>
+?>
 <div class="page-wrapper">
     <?php
     require '../connect.php';
@@ -38,30 +47,26 @@ include './components/header.php'
     <div class="container mt-5">
         <div class="row align-items-center justify-content-center">
             <div class="col-md-6">
-                <form action="./action/user-action_vuntpc07201.php" method="post"
-                    class="needs-validation bg-white p-4 mb-5" novalidate>
+                <form action="./action/user-action_vuntpc07201.php" method="post" class="needs-validation bg-white p-4 mb-5" novalidate>
                     <div class="mb-3">
                         <label for="fullName">Họ tên:</label>
-                        <input type="text" class="form-control" name="fullName" id="fullName"
-                            value="<?= $user['fullName'] ?>" required>
+                        <input type="text" class="form-control" name="fullName" id="fullName" value="<?= $user['fullName'] ?>" required>
                         <div class="invalid-feedback">Vui lòng nhập họ tên</div>
                     </div>
                     <div class="mb-3">
                         <label for="username">Username:</label>
-                        <input type="text" class="form-control" name="username_new" id="username_new"
-                            value="<?= $user['username'] ?>" required>
+                        <input type="text" class="form-control" name="username" id="username" value="<?= $user['username'] ?>" required>
                         <div class="invalid-feedback">Vui lòng nhập username</div>
                     </div>
                     <div class="mb-3">
                         <label for="password">Password:</label>
-                        <input type="password" class="form-control" name="password" id="password"
-                            value="<?= $user['password'] ?>" required>
+                        <input type="password" class="form-control" name="password_new" value="<?= $user['password'] ?>" id="password_new" required>
+                        <input type="hidden" value="<?= $user['password'] ?>" name="password_old" id="password_old">
                         <div class="invalid-feedback">Vui lòng nhập password</div>
                     </div>
                     <div class="mb-3">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" name="email" id="email" value="<?= $user['email'] ?>"
-                            required>
+                        <input type="email" class="form-control" name="email" id="email" value="<?= $user['email'] ?>" required>
                         <div class="invalid-feedback">Vui lòng nhập email</div>
                     </div>
                     <div class="mb-3">
@@ -74,7 +79,6 @@ include './components/header.php'
                         <div class="invalid-feedback">Vui lòng chọn phân quyền</div>
                     </div>
                     <input type="hidden" value="<?= $user['user_id'] ?>" name="user_id">
-                    <input type="hidden" value="<?= $user['username'] ?>" name="username_old">
                     <button class="btn btn-primary" type="submit" name="user_edit">Lưu</button>
                 </form>
             </div>

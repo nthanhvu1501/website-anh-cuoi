@@ -1,7 +1,14 @@
 <?php
 session_start();
 include './components/header.php'
-    ?>
+?>
+<?php 
+if(isset($_GET['error_username'])):
+?>
+<script>alert("username đã tồn tại")</script>
+<?php 
+endif;
+?>
 <div class="page-wrapper">
 <div class="page-breadcrumb">
         <div class="row">

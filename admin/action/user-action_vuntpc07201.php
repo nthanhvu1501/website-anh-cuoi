@@ -11,7 +11,7 @@ if (isset($_POST['user_add'])) {
     // kiểm tra username tồn tại trong db
     $usernameDB = $conn->query("SELECT * FROM user WHERE username = '$username'")->fetch_assoc();
     if ($usernameDB > 0) {
-        echo "username: " . $username . " đã tồn tại";
+        header('location: ../user-add_vuntpc07201.php?error_username');
     } else {
         $sql = "INSERT INTO user (fullName,username,email,password,permission)
                 VALUE ('$fullName','$username','$email','$password','$permission')";
@@ -19,44 +19,28 @@ if (isset($_POST['user_add'])) {
         if ($result) {
             header('location: ../user-list_vuntpc07201.php');
         }
-
     }
-
 }
 if (isset($_POST['user_edit'])) {
     $user_id = $_POST['user_id'];
     $fullName = $_POST['fullName'];
     $email = $_POST['email'];
-    $username_old = $_POST['username_old'];
-    $username_new = $_POST['username_new'];
     $permission = $_POST['permission'];
-    $password = md5($_POST['password']);
-
-    // kiểm tra username tồn tại trong db
-
-
-
-    if ($username_new == $username_old) {
-        $username = $username_old;
-        $sql = "UPDATE user
-                SET 
-                    fullName = '$fullName',
-                    username = '$username',
-                    password = '$password',
-                    email = '$email',
-                    permission ='$permission'
-                WHERE user_id= '$user_id'";
-        $result = $conn->query($sql);
-        if ($result) {
-            header('location: ../user-list_vuntpc07201.php');
-        }
+    $username = $_POST['username'];
+    $password_old = $_POST['password_old'];
+    $password_new = $_POST['password_new'];
+    // kiểm tra mật khẩu
+    if ($password_new == $password_old) {
+        $password = $password_old;
     } else {
-        $usernameDB = $conn->query("SELECT * FROM user WHERE username = '$username_new'")->fetch_assoc();
-        if ($usernameDB > 0) {
-            echo $username_new . ' đã tồn tại';
-        } else {
-            $username = $username_new;
-            $sql = "UPDATE user
+        $password = md5($password_new);
+    }
+    // kiểm tra username trong db
+    $usernameDB = $conn->query("SELECT * FROM user WHERE username = '$username' AND user_id != '$user_id'")->fetch_assoc();
+    if ($usernameDB > 0) {
+        header('location: ../user-edit_vuntpc07201.php?user_id='.$user_id.'&error_username');
+    } else {
+        $sql = "UPDATE user
                     SET 
                         fullName = '$fullName',
                         username = '$username',
@@ -64,10 +48,9 @@ if (isset($_POST['user_edit'])) {
                         email = '$email',
                         permission ='$permission'
                     WHERE user_id= '$user_id'";
-            $result = $conn->query($sql);
-            if ($result) {
-                header('location: ../user-list_vuntpc07201.php');
-            }
+        $result = $conn->query($sql);
+        if ($result) {
+            header('location: ../user-list_vuntpc07201.php');
         }
     }
 }
@@ -79,4 +62,3 @@ if (isset($_POST['user_delete'])) {
         header('location: ../user-list_vuntpc07201.php');
     }
 }
-?>

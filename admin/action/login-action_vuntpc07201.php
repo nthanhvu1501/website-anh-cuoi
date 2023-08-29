@@ -16,7 +16,8 @@ if (isset($_POST['login'])) {
             header('location: ../../client');
         }
     } else {
-        echo "Sai thông tin tài khoản";
+        $_SESSION['error_login'] = "Sai thông tin";
+        header('location: ../login_phuoctmpc07090.php');
     }
 }
 ?>

@@ -40,7 +40,7 @@ include './components/header.php'
                             <td>
                                 <?= $album['album_id'] ?>
                             </td>
-                            <td>
+                            <td  style="width: 20% ">
                                 <?= $album['name'] ?>
                             </td>
                             <td style="width: 200px; height: 200px;">
@@ -50,7 +50,7 @@ include './components/header.php'
                             <td>
                                 <?= $album['description'] ?>
                             </td>
-                            <td>
+                            <td >
                                 <?php
                                 if ($album['is_active'] == 1):
                                     ?>
@@ -63,7 +63,7 @@ include './components/header.php'
                                 endif
                                 ?>
                             </td>
-                            <td>
+                            <td style="width:20%">
                                 <a href="album-view_vuntpc07201.php?album_id=<?= $album['album_id'] ?>"
                                     class="btn btn-primary">xem</a>
                                 <a href="album-edit_vuntpc07201.php?album_id=<?= $album['album_id'] ?>"
@@ -100,6 +100,7 @@ include './components/header.php'
                         <?php
                     endwhile;
                 endif;
+                
                 ?>
             </tbody>
         </table>
