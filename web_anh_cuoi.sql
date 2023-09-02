@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 24, 2023 at 04:06 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th8 31, 2023 lúc 06:42 AM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `web_anh_cuoi`
+-- Cơ sở dữ liệu: `web_anh_cuoi`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `album`
+-- Cấu trúc bảng cho bảng `album`
 --
 
 CREATE TABLE `album` (
@@ -38,16 +38,17 @@ CREATE TABLE `album` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `album`
+-- Đang đổ dữ liệu cho bảng `album`
 --
 
 INSERT INTO `album` (`album_id`, `thumbnail`, `name`, `description`, `is_active`, `create_at`, `update_at`) VALUES
-(1, '20230811164228.jpg', 'Album 1', 'ALBUM ẢNH CƯỚI ĐẸP HÀ NỘI: NAM & VŨ', '1', '2023-08-19 08:32:33', '2023-08-19 08:32:33');
+(10, '20230831084749.jpg', 'Album ảnh cưới đẹp tại Hà Nội', 'Album ảnh cưới đẹp tại Hà Nội', '1', '2023-08-31 08:47:49', '2023-08-31 08:47:49'),
+(11, '20230831084842.jpg', 'Album ảnh cưới Hàn Quốc tại phim trường độc quyền của TuArt: Việt Anh & Sam', 'Album ảnh cưới Hàn Quốc tại phim trường độc quyền của TuArt: Việt Anh & Sam', '1', '2023-08-31 08:48:42', '2023-08-31 08:48:42');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `image`
+-- Cấu trúc bảng cho bảng `image`
 --
 
 CREATE TABLE `image` (
@@ -58,17 +59,33 @@ CREATE TABLE `image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `image`
+-- Đang đổ dữ liệu cho bảng `image`
 --
 
 INSERT INTO `image` (`image_id`, `image`, `album_id`, `create_at`) VALUES
-(7, '20230811164244.jpg', 1, '2023-08-21 09:19:49'),
-(8, '20230811164248.jpg', 1, '2023-08-21 09:19:49');
+(17, '202308310847580.jpg', 10, '2023-08-31 08:47:58'),
+(18, '202308310847581.jpg', 10, '2023-08-31 08:47:58'),
+(19, '202308310847582.jpg', 10, '2023-08-31 08:47:58'),
+(20, '202308310847583.jpg', 10, '2023-08-31 08:47:58'),
+(21, '202308310847584.jpg', 10, '2023-08-31 08:47:58'),
+(22, '202308310847585.jpg', 10, '2023-08-31 08:47:58'),
+(23, '202308310847586.jpg', 10, '2023-08-31 08:47:58'),
+(24, '202308310847587.jpg', 10, '2023-08-31 08:47:58'),
+(25, '202308310848510.jpg', 11, '2023-08-31 08:48:51'),
+(26, '202308310848511.jpg', 11, '2023-08-31 08:48:51'),
+(27, '202308310848512.jpg', 11, '2023-08-31 08:48:51'),
+(28, '202308310848513.jpg', 11, '2023-08-31 08:48:51'),
+(29, '202308310848514.jpg', 11, '2023-08-31 08:48:51'),
+(30, '202308310848515.jpg', 11, '2023-08-31 08:48:51'),
+(31, '202308310848516.jpg', 11, '2023-08-31 08:48:51'),
+(32, '202308310848517.jpg', 11, '2023-08-31 08:48:51'),
+(33, '202308310848518.jpg', 11, '2023-08-31 08:48:51'),
+(34, '202308310848519.jpg', 11, '2023-08-31 08:48:51');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `imageselected`
+-- Cấu trúc bảng cho bảng `imageselected`
 --
 
 CREATE TABLE `imageselected` (
@@ -77,18 +94,10 @@ CREATE TABLE `imageselected` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `imageselected`
---
-
-INSERT INTO `imageselected` (`image_id`, `image`, `user_id`) VALUES
-(47, '20230811164228.jpg', 6),
-(48, '20230811164248.jpg', 6);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Cấu trúc bảng cho bảng `user`
 --
 
 CREATE TABLE `user` (
@@ -101,76 +110,76 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user`
+-- Đang đổ dữ liệu cho bảng `user`
 --
 
 INSERT INTO `user` (`user_id`, `fullName`, `username`, `email`, `password`, `permission`) VALUES
-(6, 'user1', 'user2', 'user1@gmail.com', 'd9b1d7db4cd6e70935368a1efb10e377', 'user'),
+(6, 'user1', 'user1', 'user1@gmail.com', 'd9b1d7db4cd6e70935368a1efb10e377', 'user'),
 (7, 'abc', 'admin', 'admin@gmail.com', '202cb962ac59075b964b07152d234b70', 'admin');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `album`
+-- Chỉ mục cho bảng `album`
 --
 ALTER TABLE `album`
   ADD PRIMARY KEY (`album_id`);
 
 --
--- Indexes for table `image`
+-- Chỉ mục cho bảng `image`
 --
 ALTER TABLE `image`
   ADD PRIMARY KEY (`image_id`),
   ADD KEY `id_album` (`album_id`);
 
 --
--- Indexes for table `imageselected`
+-- Chỉ mục cho bảng `imageselected`
 --
 ALTER TABLE `imageselected`
   ADD PRIMARY KEY (`image_id`);
 
 --
--- Indexes for table `user`
+-- Chỉ mục cho bảng `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `album`
+-- AUTO_INCREMENT cho bảng `album`
 --
 ALTER TABLE `album`
-  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `image`
+-- AUTO_INCREMENT cho bảng `image`
 --
 ALTER TABLE `image`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `imageselected`
+-- AUTO_INCREMENT cho bảng `imageselected`
 --
 ALTER TABLE `imageselected`
   MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `image`
+-- Các ràng buộc cho bảng `image`
 --
 ALTER TABLE `image`
   ADD CONSTRAINT `image_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`);

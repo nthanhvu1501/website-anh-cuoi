@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ?>
 <nav class="navbar navbar-expand-lg">
@@ -14,9 +14,6 @@ session_start();
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./index.php">Trang chủ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./image-selected_vuntpc07201.php">Ảnh đã chọn</a>
                 </li>
             </ul>
             <form class="d-flex w-50 mx-auto" role="search" action="./index.php" method="get">
@@ -41,6 +38,10 @@ session_start();
                         <a class="dropdown-item" href="./user-info_vuntpc07201.php">
                             <i data-feather="user" class="svg-icon me-2 ms-1"></i>
                             Tài khoản của tôi
+                        </a>
+                        <a class="dropdown-item" href="./image-selected_vuntpc07201.php">
+                            <i data-feather="image" class="svg-icon me-2 ms-1"></i>
+                            Ảnh đã chọn
                         </a>
                         <?php
                         if (isset($_SESSION['admin'])) :
